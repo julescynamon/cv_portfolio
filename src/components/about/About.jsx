@@ -44,7 +44,7 @@ const About = () => {
 						Je viens d'obtenir mon diplôme de
 						web développeur chez OpenClassrooms, après 8 mois de
 						formation. Je suis à la recherche d'un emploi de web
-						dévellopeur junior plus axé sur le devellopement Front.
+						développeur junior plus axé sur le developpement Front.
 					</p>
 					<a href="#contact" className='btn btn-primary'>Contactez-moi !</a>
 				</div>
