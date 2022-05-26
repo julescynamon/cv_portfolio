@@ -1,12 +1,56 @@
 import React from 'react';
 import './about.css';
+import ImgCode from "../../assets/code.jpg";
+import { FaAward } from 'react-icons/fa';
+import { VscFolderLibrary } from "react-icons/vsc";
+import { AiFillSchedule } from "react-icons/ai";
 
 const About = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+	return (
+		<section id='about'>
+			<h5>Ce qu'il faut savoir</h5>
+			<h2>À propos de moi</h2>
+
+			<div className='container about__container'>
+				<div className='about__me'>
+					<div className='about__me-image'>
+						<img src={ImgCode} alt='ecran avec du code' />
+					</div>
+				</div>
+
+				<div className='about__content'>
+					<div className='about__cards'>
+						<article className='about__card'>
+							<FaAward className='about__icon' />
+							<h5>Éxperiences</h5>
+							<small>1 ans de formation</small>
+						</article>
+					
+						<article className='about__card'>
+							<VscFolderLibrary className='about__icon' />
+							<h5>Projets</h5>
+							<small>Plus de 40 projets persos et école</small>
+						</article>
+					
+						<article className='about__card'>
+							<AiFillSchedule className='about__icon' />
+							<h5>Soft Kills</h5>
+							<small>
+								Adaptabilité, rigoureux, curieux, motivé{" "}
+							</small>
+						</article>
+					</div>
+					<p>
+						Je viens d'obtenir mon diplôme de
+						web développeur chez OpenClassrooms, après 8 mois de
+						formation. Je suis à la recherche d'un emploi de web
+						dévellopeur junior plus axé sur le devellopement Front.
+					</p>
+					<a href="#contact" className='btn btn-primary'>Contactez-moi !</a>
+				</div>
+			</div>
+		</section>
+	);
 }
 
 export default About
