@@ -1,13 +1,16 @@
-import React from 'react';
-import './portfolio.css';
-import Projet1 from '../../assets/projet1.png';
-import Projet2 from '../../assets/projet2.png';
-import Projet3 from '../../assets/projet3.png';
-import Projet4 from '../../assets/projet4.png';
-import Projet5 from '../../assets/projet5.png';
-import Projet6 from '../../assets/projet6.png';
-import Projet7 from '../../assets/projet7.png';
-
+import React, { useState } from "react";
+import "./portfolio.css";
+import { Waypoint } from "react-waypoint";
+import { useSpring, animated } from "react-spring";
+import Projet1 from "../../assets/projet1.png";
+import Projet2 from "../../assets/projet2.png";
+import Projet3 from "../../assets/projet3.png";
+import Projet4 from "../../assets/projet4.png";
+import Projet5 from "../../assets/projet5.png";
+import Projet6 from "../../assets/projet6.png";
+import Projet7 from "../../assets/projet7.png";
+import Projet8 from "../../assets/projet8.png";
+import Projet9 from "../../assets/projet9.png";
 
 const data = [
 	{
@@ -59,9 +62,30 @@ const data = [
 		github: "https://github.com/julescynamon/SpaceInvaders",
 		demo: "https://julescynamon.github.io/SpaceInvaders/",
 	},
+	{
+		id: 8,
+		image: Projet8,
+		title: "Projet exercice site E-Commerce en React",
+		github: "https://github.com/julescynamon/Ecommerce-react",
+		demo: "https://julescynamon.github.io/Ecommerce-react/",
+	},
+	{
+		id: 9,
+		image: Projet9,
+		title: "Projet exercice Pokedex en js natif",
+		github: "https://github.com/julescynamon/pokedexjs",
+		demo: "https://julescynamon.github.io/pokedexjs/",
+	},
 ];
 
 const Portfolio = () => {
+	const [toggleTxt, setToggleTxt] = useState(false);
+
+	const animation = useSpring({
+		opacity: toggleTxt ? 1 : 0,
+		transform: toggleTxt ? "translateX(0)" : "translateX(-50%)",
+	});
+
 	return (
 		<section id='portfolio'>
 			<h5>Mon Travails</h5>
@@ -74,12 +98,10 @@ const Portfolio = () => {
 							<div className='portfolio__item-image'>
 								<img src={image} alt='' />
 							</div>
-							<h3>
-								{title}
-							</h3>
+							<h3>{title}</h3>
 							<div className='portfolio__item-cta'>
 								<a
-									href= {github}
+									href={github}
 									className='btn'
 									target='_blank'
 									rel='noreferrer'
@@ -87,7 +109,7 @@ const Portfolio = () => {
 									Github
 								</a>
 								<a
-									href= {demo}
+									href={demo}
 									className='btn btn-primary'
 									target='_blank'
 									rel='noreferrer'
@@ -98,9 +120,27 @@ const Portfolio = () => {
 						</article>
 					);
 				})}
+				<Waypoint
+					bottomOffset='30%'
+					onEnter={() => {
+						if (!toggleTxt) {
+							setToggleTxt(true);
+						}
+					}}
+				/>
+				<animated.div style={animation}>
+					<a
+						href='https://github.com/julescynamon'
+						className='btn btn-primary btn-anchor'
+						target='_blank'
+						rel='noreferrer'
+					>
+						Pour plus de Projet Git cliquez içi !
+					</a>
+				</animated.div>
 			</div>
 		</section>
 	);
-}
+};
 
-export default Portfolio
+export default Portfolio;

@@ -33,10 +33,6 @@
     margin-bottom: 1rem;
 }
 
-.swiper-pagination .swiper-pagination-bullets {
-    background: var(--color-primary);
-    bottom: 4rem;
-}
 
 /*--------------------------- Media queries (ecran moyen)---------------------------*/
 
