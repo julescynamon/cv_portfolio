@@ -52,7 +52,7 @@
 }
 
 .swiper-pagination .swiper-pagination-clickable .swiper-pagination-bullets {
-    background: var(--color-primary);
+    background: var(--color-primary) !important; 
 }
 
 

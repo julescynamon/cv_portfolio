@@ -1,20 +1,98 @@
-import React from 'react';
-import './contact.css';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import "./contact.css";
+import { MdOutlineEmail } from "react-icons/md";
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { BsTelephone } from "react-icons/bs";
 
 const Contact = () => {
-    return (
-        <section id='contact'>
-            <h2>Contactez moi</h2>
+	const form = useRef();
 
-            <div className="container contact__container">
-                <div className="contact__options">
-                    <article className="contact__option">
-                        
-                    </article>
-                </div>
-            </div>
-        </section>
-    )
-}
+	const sendEmail = (e) => {
+		e.preventDefault();
 
-export default Contact
+		emailjs
+			.sendForm(
+				"service_k4reqfk",
+				"template_1iotgam",
+				form.current,
+				"e3gyO09a_liHF4gjW",
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				},
+			);
+
+		e.target.reset();
+	};
+
+	return (
+		<section id='contact'>
+			<h2>Contactez moi</h2>
+
+			<div className='container contact__container'>
+				<div className='contact__options'>
+					<article className='contact__option'>
+						<MdOutlineEmail className='contact__option-icon' />
+						<h4>Email</h4>
+						<h5>julescweb@gmail.com</h5>
+						<a
+							href='mailto:julescweb@gmail.com'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Envoyez moi un mail
+						</a>
+					</article>
+					<article className='contact__option'>
+						<AiOutlineLinkedin className='contact__option-icon' />
+						<h4>Linkedin</h4>
+						<h5>julesCweb</h5>
+						<a
+							href='https://www.linkedin.com/in/julescweb/'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Envoyez moi un message
+						</a>
+					</article>
+					<article className='contact__option'>
+						<BsTelephone className='contact__option-icon' />
+						<h4>Téléphone</h4>
+						<h5>0749192633</h5>
+					</article>
+				</div>
+				{/* fin de contact option */}
+				<form ref={form} onSubmit={sendEmail}>
+					<input
+						type='text'
+						placeholder='Votre Nom'
+						name='name'
+						required
+					/>
+					<input
+						type='text'
+						placeholder='Votre Email'
+						name='email'
+						required
+					/>
+					<textarea
+						name='message'
+						rows='7'
+						placeholder='Écrivez votre message'
+						required
+					></textarea>
+					<button type='submit' className='btn btn-primary'>
+						Envoyez votre message
+					</button>
+				</form>
+			</div>
+		</section>
+	);
+};
+
+export default Contact;
