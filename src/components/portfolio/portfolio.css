@@ -51,6 +51,10 @@
         margin-top: 2rem;
 }
 
+.swiper-pagination .swiper-pagination-clickable .swiper-pagination-bullets {
+    background: var(--color-primary);
+}
+
 
 /*--------------------------- Media queries (ecran moyen et petit)---------------------------*/
 
