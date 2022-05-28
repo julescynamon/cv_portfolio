@@ -8,7 +8,6 @@ import { AiFillSchedule } from "react-icons/ai";
 const About = () => {
 	return (
 		<section id='about'>
-			<h5>Ce qu'il faut savoir</h5>
 			<h2>À propos de moi</h2>
 
 			<div className='container about__container'>

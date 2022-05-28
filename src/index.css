@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins:wght@300;400;500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400;600&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -36,11 +39,11 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--color-bg);
+    font-family: 'Spline Sans Mono', sans-serif;
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(../src//assets/bg-texture.png);
+    background-color: #1f1f38;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%232c2c6c' fill-opacity='0.56'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
 
 /*--------------------------- style général des composants ---------------------------*/

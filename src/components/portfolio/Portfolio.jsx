@@ -11,6 +11,17 @@ import Projet6 from "../../assets/projet6.png";
 import Projet7 from "../../assets/projet7.png";
 import Projet8 from "../../assets/projet8.png";
 import Projet9 from "../../assets/projet9.png";
+// import Swiper core and required modules
+import { Navigation, Pagination } from "swiper";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 
 const data = [
 	{
@@ -30,9 +41,9 @@ const data = [
 	{
 		id: 3,
 		image: Projet3,
-		title: "Projet personel de Site d'annonce",
-		github: "https://github.com/julescynamon/siteD-annonce",
-		demo: " https://julescynamon.github.io/siteD-annonce/",
+		title: "Projet 7 de la formation Openclassrooms",
+		github: "https://github.com/julescynamon/JeuDuMorpion",
+		demo: " https://julescynamon.github.io/JeuDuMorpion/",
 	},
 	{
 		id: 4,
@@ -58,7 +69,7 @@ const data = [
 	{
 		id: 7,
 		image: Projet7,
-		title: "Projet personel du Jeux Space Invader",
+		title: "Projet personel du Jeux Space Invader en js natif",
 		github: "https://github.com/julescynamon/SpaceInvaders",
 		demo: "https://julescynamon.github.io/SpaceInvaders/",
 	},
@@ -87,14 +98,27 @@ const Portfolio = () => {
 	});
 
 	return (
-		<section id='portfolio'>
-			<h5>Mon Travails</h5>
-			<h2>Portfolio</h2>
+		<section id='portfolio' className='container'>
+			<h2 className="details">Portfolio</h2>
 
-			<div className='container portfolio__container'>
+			<Swiper
+				modules={[Navigation, Pagination]}
+				spaceBetween={53}
+				navigation
+				pagination={{ clickable: true }}
+				breakpoints={{
+					800: {
+						slidesPerView: 2,
+					},
+					300: {
+						slidesPerView: 1,
+					},
+				}}
+				className=' portfolio__container'
+			>
 				{data.map(({ id, image, title, github, demo }) => {
 					return (
-						<article key={id} className='portfolio__item'>
+						<SwiperSlide key={id} className='portfolio__item'>
 							<div className='portfolio__item-image'>
 								<img src={image} alt='' />
 							</div>
@@ -117,28 +141,32 @@ const Portfolio = () => {
 									Live Demo
 								</a>
 							</div>
-						</article>
+						</SwiperSlide>
 					);
 				})}
+			</Swiper>
+			
+			<div className="btn-anchor">
 				<Waypoint
-					bottomOffset='30%'
-					onEnter={() => {
-						if (!toggleTxt) {
-							setToggleTxt(true);
-						}
-					}}
-				/>
+				bottomOffset='30%'
+				onEnter={() => {
+					if (!toggleTxt) {
+						setToggleTxt(true);
+					}
+				}}
+			/>
 				<animated.div style={animation}>
-					<a
-						href='https://github.com/julescynamon'
-						className='btn btn-primary btn-anchor'
-						target='_blank'
-						rel='noreferrer'
-					>
-						Pour plus de Projet Git cliquez içi !
-					</a>
-				</animated.div>
+				<a
+					href='https://github.com/julescynamon'
+					className='btn btn-primary btn-small'
+					target='_blank'
+					rel='noreferrer'
+				>
+					Pour plus de Projet Git cliquez içi !
+				</a>
+			</animated.div>
 			</div>
+			
 		</section>
 	);
 };
