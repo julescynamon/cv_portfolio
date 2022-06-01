@@ -1,5 +1,5 @@
 footer {
-    background: var(--color-primary);
+    background: linear-gradient(var(--color-primary), transparent);
     -webkit-box-shadow: 0px -10px 17px 12px #4DB5FF; 
 box-shadow: 0px -10px 17px 12px #4DB5FF;
     padding: 3rem 0;
