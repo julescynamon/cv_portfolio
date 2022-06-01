@@ -65,6 +65,15 @@
     color: var(--color-light);
 }
 
+.lienXP {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.lienXP h5 {
+    color: var(--color-white);
+}
+
 /*--------------------------- Media queries (ecran moyen)---------------------------*/
 
 @media screen and (max-width: 1024px) {

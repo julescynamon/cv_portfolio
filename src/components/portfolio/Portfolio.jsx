@@ -27,21 +27,21 @@ const data = [
 	{
 		id: 1,
 		image: Projet1,
-		title: "Projet 2 de la formation Openclassrooms",
+		title: "Intégrez une maquette en HTML et CSS",
 		github: "https://github.com/julescynamon/BoookiProject.github.io",
 		demo: "https://julescynamon.github.io/BoookiProject.github.io/",
 	},
 	{
 		id: 2,
 		image: Projet2,
-		title: "Projet 3 de la formation Openclassrooms",
+		title: "Dynamisez un site avec les animations CSS",
 		github: "https://github.com/julescynamon/CYNAMONJules_3_19102021",
 		demo: " https://julescynamon.github.io/CYNAMONJules_3_19102021/",
 	},
 	{
 		id: 3,
 		image: Projet3,
-		title: "Projet 7 de la formation Openclassrooms",
+		title: "Projet personel du jeux du morpion en JS",
 		github: "https://github.com/julescynamon/JeuDuMorpion",
 		demo: " https://julescynamon.github.io/JeuDuMorpion/",
 	},
@@ -69,7 +69,7 @@ const data = [
 	{
 		id: 7,
 		image: Projet7,
-		title: "Projet personel du Jeux Space Invader en js natif",
+		title: "Projet personel du Jeux Space Invader en JS",
 		github: "https://github.com/julescynamon/SpaceInvaders",
 		demo: "https://julescynamon.github.io/SpaceInvaders/",
 	},
@@ -83,7 +83,7 @@ const data = [
 	{
 		id: 9,
 		image: Projet9,
-		title: "Projet exercice Pokedex en js natif",
+		title: "Projet exercice Pokedex en JS",
 		github: "https://github.com/julescynamon/pokedexjs",
 		demo: "https://julescynamon.github.io/pokedexjs/",
 	},
@@ -162,7 +162,7 @@ const Portfolio = () => {
 					target='_blank'
 					rel='noreferrer'
 				>
-					Pour plus de Projet Git cliquez içi !
+					Pour plus de Projets GitHub cliquez içi !
 				</a>
 			</animated.div>
 			</div>

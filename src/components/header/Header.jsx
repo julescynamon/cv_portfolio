@@ -3,6 +3,8 @@ import "./header.css";
 import CTA from "./CTA";
 import HeaderSocials from "./HeaderSocials";
 import Typewritter from "typewriter-effect";
+import ParticlesBackground from "../../Utils/ParticlesBackground";
+
 
 
 
@@ -10,8 +12,9 @@ const Header = () => {
 	return (
 		<header id='header'>
 			<div className='me'>
+				<ParticlesBackground />
 				<div className='container header__container'>
-					<h1>
+					<h1 className="colorChange">
 						<Typewritter
 							options={{
 								autoStart: true,

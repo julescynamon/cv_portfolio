@@ -1,7 +1,7 @@
-import React from 'react';
-import './about.css';
+import React from "react";
+import "./about.css";
 import ImgCode from "../../assets/code.jpg";
-import { FaAward } from 'react-icons/fa';
+import { FaAward } from "react-icons/fa";
 import { VscFolderLibrary } from "react-icons/vsc";
 import { AiFillSchedule } from "react-icons/ai";
 
@@ -22,15 +22,19 @@ const About = () => {
 						<article className='about__card'>
 							<FaAward className='about__icon' />
 							<h5>Éxperience</h5>
-							<small>1 ans de formation chez OpenClassrooms</small>
+							<small>
+								1 ans de formation chez OpenClassrooms
+							</small>
 						</article>
-					
-						<article className='about__card'>
-							<VscFolderLibrary className='about__icon' />
-							<h5>Projets</h5>
-							<small>Plus de 40 projets persos et école</small>
-						</article>
-					
+						<a href='#portfolio' className='lienXP'>
+							<article className='about__card'>
+								<VscFolderLibrary className='about__icon' />
+								<h5>Projets</h5>
+								<small>
+									Plus de 40 projets persos et école
+								</small>
+							</article>
+						</a>
 						<article className='about__card'>
 							<AiFillSchedule className='about__icon' />
 							<h5>Soft Kills</h5>
@@ -40,17 +44,18 @@ const About = () => {
 						</article>
 					</div>
 					<p>
-						Je viens d'obtenir mon diplôme de
-						web développeur chez OpenClassrooms, après 8 mois de
-						formation. Je suis à la recherche d'un emploi de web
-						développeur junior plus axé sur le developpement Front.
+						Je viens d'obtenir mon diplôme de web développeur chez
+						OpenClassrooms, après 8 mois de formation. Je suis à la
+						recherche d'un emploi de web développeur junior plus axé
+						sur le developpement Front.
 					</p>
-					<a href="#contact" className='btn btn-primary'>Contactez-moi !</a>
+					<a href='#contact' className='btn btn-primary'>
+						Contactez-moi !
+					</a>
 				</div>
 			</div>
 		</section>
 	);
-}
+};
 
-export default About
-
+export default About;
