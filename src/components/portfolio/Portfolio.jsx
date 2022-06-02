@@ -11,6 +11,7 @@ import Projet6 from "../../assets/projet6.png";
 import Projet7 from "../../assets/projet7.png";
 import Projet8 from "../../assets/projet8.png";
 import Projet9 from "../../assets/projet9.png";
+import Projet10 from "../../assets/projet10.png";
 // import Swiper core and required modules
 import { Navigation, Pagination } from "swiper";
 
@@ -86,6 +87,13 @@ const data = [
 		title: "Projet exercice Pokedex en JS",
 		github: "https://github.com/julescynamon/pokedexjs",
 		demo: "https://julescynamon.github.io/pokedexjs/",
+	},
+	{
+		id: 10,
+		image: Projet10,
+		title: "Créer un site E-commerce en Javascript",
+		github: "https://github.com/julescynamon/projetkanap",
+		demo: "projetkanap.netlify.app",
 	},
 ];
 
