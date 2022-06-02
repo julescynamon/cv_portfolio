@@ -93,7 +93,7 @@ const data = [
 		image: Projet10,
 		title: "Créer un site E-commerce en Javascript",
 		github: "https://github.com/julescynamon/projetkanap",
-		demo: "projetkanap.netlify.app",
+		demo: "https://projetkanap.netlify.app",
 	},
 ];
 
