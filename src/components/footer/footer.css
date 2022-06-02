@@ -1,7 +1,5 @@
 footer {
-    background: linear-gradient(var(--color-primary), transparent);
-    -webkit-box-shadow: 0px -10px 17px 12px #4DB5FF; 
-box-shadow: 0px -10px 17px 12px #4DB5FF;
+    background: linear-gradient(360deg, var(--color-primary), transparent);
     padding: 3rem 0;
     text-align: center;
     font-size: 0.9rem;

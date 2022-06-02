@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 import './footer.css';
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { SiCodepen } from "react-icons/si";
 
 const Footer = () => {
+
 	return (
 		<footer>
 			<div className='footer__socials'>
@@ -30,9 +31,9 @@ const Footer = () => {
 					<SiCodepen />
 				</a>
 			</div>
-			<small className='footer__copyright'>
-				&copy; Copyright 2022 - Jules Cynamon. Tous droits réservés.
-			</small>
+				<small className='footer__copyright'>
+					&copy; Copyright 2022 - Jules Cynamon. Tous droits réservés.
+				</small>
 		</footer>
 	);
 }

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
@@ -6,6 +6,17 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 
 const Contact = () => {
+
+		const [matches, setMatches] = useState(
+			window.matchMedia("(max-width: 600px)").matches,
+		);
+
+		useEffect(() => {
+			window
+				.matchMedia("(max-width: 600px)")
+				.addEventListener("change", (e) => setMatches(e.matches));
+		}, []);
+
 	const form = useRef();
 
 	const sendEmail = (e) => {
@@ -63,7 +74,12 @@ const Contact = () => {
 					<article className='contact__option'>
 						<BsTelephone className='contact__option-icon' />
 						<h4>Téléphone</h4>
-						<h5>0749192633</h5>
+						{ matches ? (
+										<a href='tel:+33749192633'>Cliquez içi pour appelez</a>
+									) : (
+										<h5>0749192633</h5>
+										) }
+						
 					</article>
 				</div>
 				{/* fin de contact option */}
