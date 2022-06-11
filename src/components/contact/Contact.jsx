@@ -6,21 +6,23 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 
 const Contact = () => {
+	const [matches, setMatches] = useState(
+		window.matchMedia("(max-width: 600px)").matches,
+	);
 
-		const [matches, setMatches] = useState(
-			window.matchMedia("(max-width: 600px)").matches,
-		);
-
-		useEffect(() => {
-			window
-				.matchMedia("(max-width: 600px)")
-				.addEventListener("change", (e) => setMatches(e.matches));
-		}, []);
+	useEffect(() => {
+		window
+			.matchMedia("(max-width: 600px)")
+			.addEventListener("change", (e) => setMatches(e.matches));
+	}, []);
 
 	const form = useRef();
+	const [validation, setValidation] = useState("");
+	const [error, setError] = useState("");
 
 	const sendEmail = (e) => {
 		e.preventDefault();
+		
 
 		emailjs
 			.sendForm(
@@ -32,9 +34,11 @@ const Contact = () => {
 			.then(
 				(result) => {
 					console.log(result.text);
+					setValidation("Merci pour votre message !");
 				},
 				(error) => {
 					console.log(error.text);
+					setError("Une erreur est survenue, veuillez réessayer.");
 				},
 			);
 
@@ -42,7 +46,7 @@ const Contact = () => {
 	};
 
 	return (
-		<section id='contact'>
+		<section id='contact' className="contact">
 			<h2>Contactez moi</h2>
 
 			<div className='container contact__container'>
@@ -74,12 +78,13 @@ const Contact = () => {
 					<article className='contact__option'>
 						<BsTelephone className='contact__option-icon' />
 						<h4>Téléphone</h4>
-						{ matches ? (
-										<a href='tel:+33749192633'>Cliquez içi pour appelez</a>
-									) : (
-										<h5>0749192633</h5>
-										) }
-						
+						{matches ? (
+							<a href='tel:+33749192633'>
+								Cliquez içi pour appelez
+							</a>
+						) : (
+							<h5>0749192633</h5>
+						)}
 					</article>
 				</div>
 				{/* fin de contact option */}
@@ -105,6 +110,8 @@ const Contact = () => {
 					<button type='submit' className='btn btn-primary'>
 						Envoyez votre message
 					</button>
+					<p className='succesMessage'>{ validation }</p>
+					<p className='errorMessage'>{ error }</p>
 				</form>
 			</div>
 		</section>

@@ -15,14 +15,12 @@ import Projet10 from "../../assets/projet10.png";
 // import Swiper core and required modules
 import { Navigation, Pagination } from "swiper";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const data = [
 	{
@@ -35,7 +33,7 @@ const data = [
 	{
 		id: 2,
 		image: Projet2,
-		title: "Dynamisez un site avec les animations CSS",
+		title: "Dynamisez un site avec les animations SCSS",
 		github: "https://github.com/julescynamon/CYNAMONJules_3_19102021",
 		demo: " https://julescynamon.github.io/CYNAMONJules_3_19102021/",
 	},
@@ -106,8 +104,8 @@ const Portfolio = () => {
 	});
 
 	return (
-		<section id='portfolio' className='container'>
-			<h2 className="details">Portfolio</h2>
+		<section id='portfolio' className='container portfolio'>
+			<h2 className='details'>Portfolio</h2>
 
 			<Swiper
 				modules={[Navigation, Pagination]}
@@ -153,28 +151,27 @@ const Portfolio = () => {
 					);
 				})}
 			</Swiper>
-			
-			<div className="btn-anchor">
+
+			<div className='btn-anchor'>
 				<Waypoint
-				bottomOffset='30%'
-				onEnter={() => {
-					if (!toggleTxt) {
-						setToggleTxt(true);
-					}
-				}}
-			/>
+					bottomOffset='30%'
+					onEnter={() => {
+						if (!toggleTxt) {
+							setToggleTxt(true);
+						}
+					}}
+				/>
 				<animated.div style={animation}>
-				<a
-					href='https://github.com/julescynamon'
-					className='btn btn-primary btn-small'
-					target='_blank'
-					rel='noreferrer'
-				>
-					Pour plus de Projets GitHub cliquez içi !
-				</a>
-			</animated.div>
+					<a
+						href='https://github.com/julescynamon'
+						className='btn btn-primary btn-small'
+						target='_blank'
+						rel='noreferrer'
+					>
+						Pour plus de Projets GitHub cliquez içi !
+					</a>
+				</animated.div>
 			</div>
-			
 		</section>
 	);
 };

@@ -38,3 +38,11 @@ footer a {
     display: flex;
     justify-content: center;
 }
+
+/*--------------------------- Media queries (ecran petit)---------------------------*/
+
+@media screen and (max-width: 600px) {
+    footer {
+        margin-top: 1rem;
+    }
+}

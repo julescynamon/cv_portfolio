@@ -10,7 +10,7 @@ const About = () => {
 		<section id='about'>
 			<h2>À propos de moi</h2>
 
-			<div className='container about__container'>
+			<div className='container about__container about' >
 				<div className='about__me'>
 					<div className='about__me-image'>
 						<img src={ImgCode} alt='ecran avec du code' />

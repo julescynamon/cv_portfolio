@@ -12,6 +12,7 @@
 
 .details {
     margin-top: 7rem;
+    margin-bottom: 5rem;
 }
 
 .portfolio__item {
@@ -59,6 +60,10 @@
 /*--------------------------- Media queries (ecran moyen et petit)---------------------------*/
 
 @media screen and (max-width: 600px) {
+    .details{
+        margin-top: 5rem;
+        margin-bottom: 0rem; 
+    }
     .btn-small {
         font-size: 12px;
     }
