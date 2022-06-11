@@ -10,7 +10,7 @@ const About = () => {
 		<section id='about'>
 			<h2>À propos de moi</h2>
 
-			<div className='container about__container about' >
+			<div className='container about__container about'>
 				<div className='about__me'>
 					<div className='about__me-image'>
 						<img src={ImgCode} alt='ecran avec du code' />
@@ -44,10 +44,14 @@ const About = () => {
 						</article>
 					</div>
 					<p>
-						Je viens d'obtenir mon diplôme de web développeur chez
-						OpenClassrooms, après 8 mois de formation. Je suis à la
-						recherche d'un emploi de web développeur junior plus axé
-						sur le developpement Front.
+						Je suis Jules Cynamon, j'ai 33 ans, je suis en
+						reconversion professionel, je viens d'obtenir mon
+						diplôme de web développeur chez OpenClassrooms. Je suis
+						à la recherche d'un emploi de web developpeur junior
+						plus axé sur le développement Front-End. Mon
+						adaptabilité, ma motivation, et ma persévérance sont des
+						atouts qui je pense peuvent apporter un plus à votre
+						équipe.
 					</p>
 					<a href='#contact' className='btn btn-primary'>
 						Contactez-moi !
