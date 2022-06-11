@@ -46,7 +46,7 @@ const About = () => {
 					<p>
 						Je me présente Jules Cynamon, j'ai 33 ans, en
 						reconversion professionel, je viens d'obtenir mon
-						diplôme de web développeur chez OpenClassrooms. Je souhaiterais trouvé un emploi de web developpeur junior plus axé sur le développement Front-End. Mon
+						diplôme de web développeur chez OpenClassrooms. Je souhaiterais trouvé un emploi plus axé sur le développement Front-End. Mon
 						adaptabilité, ma motivation, et ma persévérance sont des
 						atouts qui je pense peuvent apporter un plus à votre
 						équipe.
