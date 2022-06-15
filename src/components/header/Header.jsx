@@ -31,8 +31,6 @@ const Header = () => {
 					<CTA />
 					<HeaderSocials />
 
-					{/* <img src={Me} alt='profil' /> */}
-
 					<a href='#contact' className='scroll__down'>
 						bas de page
 					</a>

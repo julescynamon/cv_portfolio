@@ -68,3 +68,19 @@
         font-size: 12px;
     }
 }
+
+/*--------------------------- Media queries (ecran très petit)---------------------------*/
+
+@media screen and (max-width: 360px) {
+    .container .portfolio__container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 2.5rem 2rem 3rem;
+    }
+    .portfolio__item {
+        padding: 0.5rem;
+    }
+    
+    .swipper-button-prev, .swipper-button-next {
+        display: none;
+    }
+}
