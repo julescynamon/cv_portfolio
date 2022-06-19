@@ -21,7 +21,7 @@ const About = () => {
 					<div className='about__cards'>
 						<article className='about__card'>
 							<FaAward className='about__icon' />
-							<h5>Éxperience</h5>
+							<h5>Experience</h5>
 							<small>
 								1 ans de formation chez OpenClassrooms
 							</small>
@@ -46,7 +46,7 @@ const About = () => {
 					<p>
 						Je me présente Jules Cynamon, j'ai 33 ans, en
 						reconversion professionel, je viens d'obtenir mon
-						diplôme de web développeur chez OpenClassrooms. Je souhaiterais trouvé un emploi plus axé sur le développement Front-End. Mon
+						diplôme de web développeur chez OpenClassrooms. Je souhaiterais trouver un emploi plus axé sur le développement Front-End. Mon
 						adaptabilité, ma motivation, et ma persévérance sont des
 						atouts qui je pense peuvent apporter un plus à votre
 						équipe.

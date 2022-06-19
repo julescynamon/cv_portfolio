@@ -26,14 +26,14 @@ const data = [
 	{
 		id: 1,
 		image: Projet1,
-		title: "Intégrez une maquette en HTML et CSS",
+		title: "Intégrer une maquette en HTML et CSS",
 		github: "https://github.com/julescynamon/BoookiProject.github.io",
 		demo: "https://julescynamon.github.io/BoookiProject.github.io/",
 	},
 	{
 		id: 2,
 		image: Projet2,
-		title: "Dynamisez un site avec les animations SCSS",
+		title: "Dynamiser un site avec les animations SCSS",
 		github: "https://github.com/julescynamon/CYNAMONJules_3_19102021",
 		demo: " https://julescynamon.github.io/CYNAMONJules_3_19102021/",
 	},
@@ -82,7 +82,7 @@ const data = [
 	{
 		id: 9,
 		image: Projet9,
-		title: "Projet exercice Pokedex en JS",
+		title: "Projet exercice Pokédex en JS",
 		github: "https://github.com/julescynamon/pokedexjs",
 		demo: "https://julescynamon.github.io/pokedexjs/",
 	},
@@ -144,7 +144,7 @@ const Portfolio = () => {
 									target='_blank'
 									rel='noreferrer'
 								>
-									Live Demo
+									Live Démo
 								</a>
 							</div>
 						</SwiperSlide>
