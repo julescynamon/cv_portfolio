@@ -23,7 +23,7 @@ const Header = () => {
 								strings: [
 									"Bienvenue,",
 									"Je suis Jules Cynamon,",
-									"Web Developpeur Junior.",
+									"Web Developpeur.",
 								],
 							}}
 						/>
