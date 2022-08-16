@@ -33,11 +33,9 @@ const Contact = () => {
 			)
 			.then(
 				(result) => {
-					console.log(result.text);
 					setValidation("Merci pour votre message !");
 				},
 				(error) => {
-					console.log(error.text);
 					setError("Une erreur est survenue, veuillez réessayer.");
 				},
 			);
