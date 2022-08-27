@@ -1,4 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
@@ -18,13 +21,35 @@ const Contact = () => {
 
 	const form = useRef();
 	const [validation, setValidation] = useState("");
-	const [error, setError] = useState("");
+	const [errorMessage, setErrorMessage] = useState("");
 
-	const sendEmail = (e) => {
-		e.preventDefault();
-		
+	const defaultValues = {
+		name: "",
+		email: "",
+		message: "",
+	};
 
-		emailjs
+	const contactSchema = yup.object({
+		name: yup.string().required("Name is required").min(2, "Name is too short"),
+		email: yup.string().required("Email is required").email("Invalid email"),
+		message: yup.string().required("Message is required").min(5, "Message is too short"),
+	})
+
+	const {
+		formState: { errors, isSubmitting },
+		register,
+		handleSubmit,
+		reset,
+		clearErrors,
+	} = useForm({
+		defaultValues,
+		resolver: yupResolver(contactSchema),
+	});
+
+	async function submit(values) {
+		try {
+			clearErrors();
+			emailjs
 			.sendForm(
 				"service_k4reqfk",
 				"template_1iotgam",
@@ -33,15 +58,18 @@ const Contact = () => {
 			)
 			.then(
 				(result) => {
+					reset(defaultValues);
 					setValidation("Merci pour votre message !");
 				},
 				(error) => {
-					setError("Une erreur est survenue, veuillez réessayer.");
+					setErrorMessage("Une erreur est survenue, veuillez réessayer.");
 				},
 			);
+		} catch (error) {
+			setErrorMessage("Une erreur est survenue, veuillez réessayer.");
+		}
+	}
 
-		e.target.reset();
-	};
 
 	return (
 		<section id='contact' className="contact">
@@ -86,30 +114,36 @@ const Contact = () => {
 					</article>
 				</div>
 				{/* fin de contact option */}
-				<form ref={form} onSubmit={sendEmail}>
+				<form ref={form} onSubmit={handleSubmit(submit)}>
 					<input
+						{ ...register("name") }
 						type='text'
 						placeholder='Votre Nom'
 						name='name'
 						required
 					/>
+					{errors.name && <p className="errorMessage">{ errors.name.message }</p>}
 					<input
+						{ ...register("email") }
 						type='text'
 						placeholder='Votre Email'
 						name='email'
 						required
 					/>
+					{errors.email && <p className="errorMessage">{ errors.email.message }</p>}
 					<textarea
+						{ ...register("message") }
 						name='message'
 						rows='7'
 						placeholder='Écrivez votre message'
 						required
 					></textarea>
-					<button type='submit' className='btn btn-primary'>
+					{errors.message && <p className="errorMessage">{ errors.message.message }</p>}
+					<button disabled={isSubmitting} className='btn btn-primary'>
 						Envoyez votre message
 					</button>
 					<p className='succesMessage'>{ validation }</p>
-					<p className='errorMessage'>{ error }</p>
+					<p className='errorMessage'>{ errorMessage }</p>
 				</form>
 			</div>
 		</section>
