@@ -30,9 +30,9 @@ const Contact = () => {
 	};
 
 	const contactSchema = yup.object({
-		name: yup.string().required("Name is required").min(2, "Name is too short"),
-		email: yup.string().required("Email is required").email("Invalid email"),
-		message: yup.string().required("Message is required").min(5, "Message is too short"),
+		name: yup.string().required("Le nom est requis").min(2, "Le nom est trop court"),
+		email: yup.string().required("L'email est requis").email("l'email est invalid"),
+		message: yup.string().required("Le message est requis").min(5, "Le message est trop court"),
 	})
 
 	const {
