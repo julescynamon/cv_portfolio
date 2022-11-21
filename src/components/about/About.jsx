@@ -46,10 +46,8 @@ const About = () => {
 					<p>
 						Je me présente Jules Cynamon, j'ai 33 ans, en
 						reconversion professionel, je viens d'obtenir mon
-						diplôme de web développeur chez OpenClassrooms. Je souhaiterais trouver un emploi plus axé sur le développement Front-End. Mon
-						adaptabilité, ma motivation, et ma persévérance sont des
-						atouts qui je pense peuvent apporter un plus à votre
-						équipe.
+						diplôme de web développeur chez OpenClassrooms. Ayant trouvé ma passion, je souhaiterais trouver une équipe avec qui m'épanouir et monter en compétences.
+						Ma facilité d'apprentissage, mon adaptabilité et ma persévérance sont des atouts, qui je pense, me permettraient d'exceller dans mon métier.  
 					</p>
 					<a href='#contact' className='btn btn-primary'>
 						Contactez-moi !
