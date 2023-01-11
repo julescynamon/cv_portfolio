@@ -5,7 +5,6 @@ import Projet6 from "../../assets/projet6.png";
 import Projet7 from "../../assets/projet7.png";
 import Projet8 from "../../assets/projet8.png";
 import Projet9 from "../../assets/projet9.png";
-import Projet10 from "../../assets/projet10.png";
 import Projet11 from "../../assets/projet11.png";
 import Projet12 from "../../assets/projet12.png";
 import Projet13 from "../../assets/projet13.png";
@@ -15,20 +14,6 @@ import Projet16 from "../../assets/projet16.png";
 import Projet17 from "../../assets/projet17.png";
 
 const data = [
-  {
-    id: 1,
-    image: Projet1,
-    title: "Intégrer une maquette en HTML et CSS",
-    github: "https://github.com/julescynamon/BoookiProject.github.io",
-    demo: "https://julescynamon.github.io/BoookiProject.github.io/",
-  },
-  {
-    id: 2,
-    image: Projet2,
-    title: "Dynamiser un site avec les animations SCSS",
-    github: "https://github.com/julescynamon/CYNAMONJules_3_19102021",
-    demo: " https://julescynamon.github.io/CYNAMONJules_3_19102021/",
-  },
   {
     id: 3,
     image: Projet3,
@@ -77,13 +62,6 @@ const data = [
     title: "Projet exercice Pokédex en JS",
     github: "https://github.com/julescynamon/pokedexjs",
     demo: "https://julescynamon.github.io/pokedexjs/",
-  },
-  {
-    id: 10,
-    image: Projet10,
-    title: "Créer le Front d'un site E-commerce en Javascript",
-    github: "https://github.com/julescynamon/projetkanap",
-    demo: "https://projetkanap.netlify.app",
   },
   {
     id: 11,
